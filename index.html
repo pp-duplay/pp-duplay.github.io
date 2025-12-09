@@ -1,0 +1,1037 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dokumen HTML - SMA Negeri 2 Playen</title>
+    <style>
+        /* Reset dasar */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        /* Styling dari user */
+        body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+h1 {
+    color: #1a5f7a;
+}
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modul Ajar Deep Learning: Membangun Budaya Taat Hukum</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        :root {
+            --primary: #1a5fb4;
+            --secondary: #26a269;
+            --accent: #e5a50a;
+            --light: #f8f9fa;
+            --dark: #2d3748;
+            --gray: #718096;
+            --light-gray: #e2e8f0;
+            --success: #38a169;
+            --warning: #d69e2e;
+            --danger: #e53e3e;
+            --border-radius: 10px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+        
+        body {
+            background-color: #f0f5ff;
+            color: var(--dark);
+            line-height: 1.6;
+            padding-bottom: 50px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary), #0d4a9e);
+            color: white;
+            padding: 30px 20px;
+            border-radius: var(--border-radius);
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        header::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 300px;
+            height: 300px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .header-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+        
+        .principles {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .principle {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 8px 16px;
+            border-radius: 30px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        /* Navigation */
+        .nav-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+            overflow: hidden;
+        }
+        
+        .nav-tab {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            padding: 18px 15px;
+            background: white;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            font-weight: 600;
+            color: var(--gray);
+            transition: var(--transition);
+            border-bottom: 4px solid transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .nav-tab:hover {
+            background-color: #f7fafc;
+            color: var(--primary);
+        }
+        
+        .nav-tab.active {
+            color: var(--primary);
+            border-bottom: 4px solid var(--primary);
+            background-color: #f0f7ff;
+        }
+        
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            background: white;
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-bottom: 30px;
+            animation: fadeIn 0.5s ease;
+        }
+        
+        .tab-content.active {
+            display: block;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        h2 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--light-gray);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        h3 {
+            color: var(--secondary);
+            margin: 20px 0 15px;
+        }
+        
+        /* Card Styles */
+        .card {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary);
+            transition: var(--transition);
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-title {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+        
+        /* Grid Layouts */
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 20px 0;
+        }
+        
+        /* Interactive Elements */
+        .interactive-section {
+            background: #f8fafc;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px 0;
+            border: 2px dashed var(--light-gray);
+        }
+        
+        .activity-box {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 20px;
+            margin: 15px 0;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 24px;
+            background-color: var(--primary);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+            margin: 10px 5px;
+            text-decoration: none;
+        }
+        
+        .btn:hover {
+            background-color: #0d4a9e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(13, 74, 158, 0.3);
+        }
+        
+        .btn-secondary {
+            background-color: var(--secondary);
+        }
+        
+        .btn-secondary:hover {
+            background-color: #1e8449;
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+        }
+        
+        .btn-accent:hover {
+            background-color: #c28c0c;
+        }
+        
+        /* Hierarchy Visualization */
+        .hierarchy {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 30px 0;
+            position: relative;
+        }
+        
+        .hierarchy-level {
+            width: 90%;
+            max-width: 700px;
+            padding: 20px;
+            margin: 10px 0;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            z-index: 1;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+        }
+        
+        .hierarchy-level:hover {
+            transform: scale(1.02);
+            border-color: var(--primary);
+        }
+        
+        .level-1 { background: linear-gradient(to right, #1a5fb4, #2d7bd4); color: white; }
+        .level-2 { background: linear-gradient(to right, #26a269, #38b87c); color: white; }
+        .level-3 { background: linear-gradient(to right, #e5a50a, #f6c342); color: #333; }
+        .level-4 { background: linear-gradient(to right, #c64600, #e55c00); color: white; }
+        .level-5 { background: linear-gradient(to right, #613583, #7a4b9c); color: white; }
+        .level-6 { background: linear-gradient(to right, #0d7b83, #1a9ca5); color: white; }
+        .level-7 { background: linear-gradient(to right, #a64242, #c15555); color: white; }
+        
+        .level-number {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background: rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 15px;
+            font-weight: bold;
+        }
+        
+        .level-title {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+        
+        .level-details {
+            display: none;
+            margin-top: 15px;
+            padding: 15px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            font-size: 0.95rem;
+        }
+        
+        .hierarchy-level.active .level-details {
+            display: block;
+        }
+        
+        /* Game Section */
+        .game-container {
+            background: linear-gradient(135deg, #f0f7ff, #e3f2fd);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 30px 0;
+            text-align: center;
+            border: 2px solid var(--primary);
+        }
+        
+        .game-title {
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+        
+        .quiz-container {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 25px;
+            box-shadow: var(--box-shadow);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+        
+        .quiz-question {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--dark);
+        }
+        
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .quiz-option {
+            padding: 15px;
+            background: #f8fafc;
+            border-radius: 8px;
+            cursor: pointer;
+            transition: var(--transition);
+            border: 2px solid transparent;
+        }
+        
+        .quiz-option:hover {
+            background: #e6f7ff;
+            border-color: var(--primary);
+        }
+        
+        .quiz-option.selected {
+            background: #d4edda;
+            border-color: var(--success);
+        }
+        
+        .quiz-feedback {
+            margin-top: 20px;
+            padding: 15px;
+            border-radius: 8px;
+            display: none;
+        }
+        
+        .feedback-correct {
+            background: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .feedback-incorrect {
+            background: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        /* Reflection Journal */
+        .journal-container {
+            background: linear-gradient(to right, #fff9db, #fff3bf);
+            border-radius: var(--border-radius);
+            padding: 25px;
+            margin: 25px 0;
+            border: 2px solid #fadb14;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 15px;
+            border-radius: 8px;
+            border: 2px solid var(--light-gray);
+            font-size: 1rem;
+            resize: vertical;
+            margin: 15px 0;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-tab {
+                min-width: 150px;
+                padding: 15px 10px;
+                font-size: 0.9rem;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            
+            .tab-content {
+                padding: 20px 15px;
+            }
+            
+            .hierarchy-level {
+                width: 100%;
+            }
+        }
+        
+        /* Footer */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--light-gray);
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Icons */
+        .icon {
+            font-size: 1.2rem;
+        }
+        
+        /* Progress Indicator */
+        .progress-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 20px 0;
+            position: relative;
+        }
+        
+        .progress-step {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            z-index: 1;
+        }
+        
+        .step-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--light-gray);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: var(--gray);
+            margin-bottom: 8px;
+            border: 3px solid white;
+            transition: var(--transition);
+        }
+        
+        .step-circle.active {
+            background: var(--primary);
+            color: white;
+        }
+        
+        .step-circle.completed {
+            background: var(--success);
+            color: white;
+        }
+        
+        .progress-line {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--light-gray);
+            z-index: 0;
+        }
+        
+        .progress-fill {
+            position: absolute;
+            top: 20px;
+            left: 0;
+            height: 4px;
+            background: var(--primary);
+            z-index: 1;
+            transition: width 0.5s ease;
+        }
+        
+        /* Badge for activities */
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin: 0 5px;
+        }
+        
+        .badge-mindful {
+            background-color: #e3f2fd;
+            color: #1565c0;
+        }
+        
+        .badge-meaningful {
+            background-color: #e8f5e9;
+            color: #2e7d32;
+        }
+        
+        .badge-joyful {
+            background-color: #fff3e0;
+            color: #ef6c00;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <div class="header-content">
+                <h1><i class="fas fa-balance-scale"></i> Modul Ajar Deep Learning</h1>
+                <p class="subtitle">Mata Pelajaran Pendidikan Pancasila - Bab 2: Membangun Budaya Taat Hukum</p>
+                <p><strong>SMAN 2 Playen | Kelas X / Fase E / Semester Ganjil | Tahun 2025/2026</strong></p>
+                
+                <div class="principles">
+                    <div class="principle"><i class="fas fa-brain"></i> Berkesadaran (Mindful)</div>
+                    <div class="principle"><i class="fas fa-heart"></i> Bermakna (Meaningful)</div>
+                    <div class="principle"><i class="fas fa-laugh-beam"></i> Menggembirakan (Joyful)</div>
+                </div>
+            </div>
+        </header>
+        
+        <!-- Navigation Tabs -->
+        <div class="nav-tabs">
+            <button class="nav-tab active" data-tab="modul-info">
+                <i class="fas fa-info-circle"></i> Informasi Modul
+            </button>
+            <button class="nav-tab" data-tab="materi-pembelajaran">
+                <i class="fas fa-book-open"></i> Materi Pembelajaran
+            </button>
+            <button class="nav-tab" data-tab="hierarki-hukum">
+                <i class="fas fa-sitemap"></i> Hierarki Hukum
+            </button>
+            <button class="nav-tab" data-tab="aktivitas">
+                <i class="fas fa-tasks"></i> Aktivitas Pembelajaran
+            </button>
+            <button class="nav-tab" data-tab="asesmen">
+                <i class="fas fa-clipboard-check"></i> Asesmen
+            </button>
+            <button class="nav-tab" data-tab="analisis-keragaman">
+                <i class="fas fa-users"></i> Keragaman & Nilainya
+            </button>
+        </div>
+        
+        <!-- Tab Content: Informasi Modul -->
+        <div id="modul-info" class="tab-content active">
+            <h2><i class="fas fa-info-circle"></i> Informasi Modul</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-user-edit"></i>
+                        <h3>Identitas Modul</h3>
+                    </div>
+                    <p><strong>Nama Sekolah:</strong> SMAN 2 Playen</p>
+                    <p><strong>Penyusun:</strong> Beti Triwahyuni, S.Pd., M.Pd.</p>
+                    <p><strong>Mata Pelajaran:</strong> Pendidikan Pancasila</p>
+                    <p><strong>Kelas / Fase / Semester:</strong> X / E / Ganjil</p>
+                    <p><strong>Alokasi Waktu:</strong> 2 Jam Pelajaran</p>
+                    <p><strong>Tahun Pelajaran:</strong> 2025 / 2026</p>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-graduation-cap"></i>
+                        <h3>Karakteristik Peserta Didik</h3>
+                    </div>
+                    <p><strong>Pengetahuan Awal:</strong> Memahami dasar aturan di rumah dan sekolah, tetapi pemahaman mendalam tentang konsep hukum masih terbatas.</p>
+                    <p><strong>Minat:</strong> Bervariasi; perlu dikaitkan dengan kasus nyata yang relevan dengan kehidupan remaja.</p>
+                    <p><strong>Kebutuhan Belajar:</strong> Visual (hierarki hukum), auditori (diskusi), dan bimbingan ekstra untuk konsep abstrak.</p>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Capaian Pembelajaran</h3>
+                </div>
+                <p>Peserta didik menerapkan perilaku taat hukum berdasarkan peraturan yang berlaku di masyarakat; menganalisis tata urutan peraturan perundang-undangan di Indonesia.</p>
+                <p><strong>Elemen:</strong> Undang-Undang Dasar Negara Republik Indonesia Tahun 1945</p>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-chart-line"></i>
+                    <h3>Dimensi Profil Lulusan</h3>
+                </div>
+                <div class="grid-3">
+                    <div><i class="fas fa-pray"></i> Keimanan dan Ketakwaan</div>
+                    <div><i class="fas fa-user-friends"></i> Kewargaan</div>
+                    <div><i class="fas fa-brain"></i> Penalaran Kritis</div>
+                    <div><i class="fas fa-lightbulb"></i> Kreativitas</div>
+                    <div><i class="fas fa-hands-helping"></i> Kolaborasi</div>
+                    <div><i class="fas fa-user-check"></i> Kemandirian</div>
+                    <div><i class="fas fa-comments"></i> Komunikasi</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Content: Materi Pembelajaran -->
+        <div id="materi-pembelajaran" class="tab-content">
+            <h2><i class="fas fa-book-open"></i> Materi Pembelajaran</h2>
+            
+            <div class="progress-container">
+                <div class="progress-line"></div>
+                <div class="progress-fill" id="progress-fill" style="width: 33%;"></div>
+                
+                <div class="progress-step">
+                    <div class="step-circle completed">1</div>
+                    <span>Pendahuluan</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle active">2</div>
+                    <span>Materi Inti</span>
+                </div>
+                <div class="progress-step">
+                    <div class="step-circle">3</div>
+                    <span>Penutup</span>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-bullseye"></i>
+                    <h3>Tujuan Pembelajaran</h3>
+                </div>
+                <p>Setelah kegiatan pembelajaran, peserta didik diharapkan mampu:</p>
+                <ol>
+                    <li>Mengidentifikasi tata urutan peraturan perundang-undangan di Indonesia sesuai dengan hierarki yang berlaku dengan akurat.</li>
+                    <li>Memberikan contoh peraturan perundang-undangan dari setiap tingkatan hierarki dan menjelaskan relevansinya dalam kehidupan sehari-hari peserta didik.</li>
+                </ol>
+            </div>
+            
+            <div class="interactive-section">
+                <h3><i class="fas fa-lightbulb"></i> Konteks Pembelajaran</h3>
+                <p>Materi ini akan dikaitkan dengan konteks nyata yang relevan dengan kehidupan peserta didik:</p>
+                
+                <div class="grid-2">
+                    <div class="activity-box">
+                        <h4><span class="badge badge-mindful">Berkesadaran</span> Fenomena Pelanggaran Lalu Lintas</h4>
+                        <p>Menganalisis kasus pelanggaran lalu lintas di kalangan remaja dan hubungannya dengan UU Lalu Lintas dan Angkutan Jalan.</p>
+                    </div>
+                    
+                    <div class="activity-box">
+                        <h4><span class="badge badge-meaningful">Bermakna</span> Peraturan Sekolah</h4>
+                        <p>Mengkaji peraturan sekolah (tata tertib, seragam, penggunaan HP) sebagai contoh penerapan hierarki peraturan dalam lingkungan terdekat.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-project-diagram"></i>
+                    <h3>Lintas Disiplin Ilmu</h3>
+                </div>
+                <div class="grid-3">
+                    <div>
+                        <h4><i class="fas fa-users"></i> Sosiologi</h4>
+                        <p>Memahami interaksi sosial, peran norma dalam masyarakat, dan dampak pelanggaran hukum terhadap stabilitas sosial.</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-gavel"></i> Ilmu Hukum</h4>
+                        <p>Memahami konsep dasar hukum, sistem hukum, dan penegakan hukum.</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-history"></i> Sejarah</h4>
+                        <p>Memahami perkembangan sistem hukum di Indonesia dan hubungannya dengan sejarah bangsa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Content: Hierarki Hukum -->
+        <div id="hierarki-hukum" class="tab-content">
+            <h2><i class="fas fa-sitemap"></i> Hierarki Peraturan Perundang-undangan di Indonesia</h2>
+            
+            <p>Menurut Undang-Undang Nomor 12 Tahun 2011 tentang Pembentukan Peraturan Perundang-Undangan, hierarki peraturan perundang-undangan di Indonesia adalah sebagai berikut:</p>
+            
+            <div class="hierarchy">
+                <div class="hierarchy-level level-1" data-level="1">
+                    <div class="level-number">1</div>
+                    <div class="level-title">Undang-Undang Dasar Negara Republik Indonesia Tahun 1945 (UUD 1945)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Hukum dasar tertulis tertinggi di Indonesia.</p>
+                        <p><strong>Contoh:</strong> Pasal 28 tentang Hak Asasi Manusia, Pasal 33 tentang Perekonomian Nasional.</p>
+                        <p><strong>Relevansi:</strong> Melindungi hak-hak dasar warga negara termasuk hak peserta didik untuk mendapatkan pendidikan.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-2" data-level="2">
+                    <div class="level-number">2</div>
+                    <div class="level-title">Ketetapan Majelis Permusyawaratan Rakyat (Tap MPR)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Produk hukum MPR yang berlaku sebelum perubahan UUD 1945.</p>
+                        <p><strong>Contoh:</strong> Tap MPR No. VI/MPR/2001 tentang Etika Kehidupan Berbangsa.</p>
+                        <p><strong>Relevansi:</strong> Menjadi pedoman dalam kehidupan berbangsa dan bernegara.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-3" data-level="3">
+                    <div class="level-number">3</div>
+                    <div class="level-title">Undang-Undang (UU) / Peraturan Pemerintah Pengganti Undang-Undang (Perppu)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Produk hukum yang dibentuk oleh DPR dengan persetujuan Presiden.</p>
+                        <p><strong>Contoh:</strong> UU No. 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan, UU No. 35 Tahun 2014 tentang Perlindungan Anak.</p>
+                        <p><strong>Relevansi:</strong> Mengatur berbagai aspek kehidupan, termasuk aturan lalu lintas yang relevan bagi remaja.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-4" data-level="4">
+                    <div class="level-number">4</div>
+                    <div class="level-title">Peraturan Pemerintah (PP)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Peraturan yang ditetapkan oleh Presiden untuk menjalankan UU.</p>
+                        <p><strong>Contoh:</strong> PP No. 74 Tahun 2008 tentang Guru, PP No. 32 Tahun 2013 tentang Perubahan atas PP No. 19 Tahun 2005 tentang Standar Nasional Pendidikan.</p>
+                        <p><strong>Relevansi:</strong> Mengatur pelaksanaan pendidikan di sekolah yang langsung dialami peserta didik.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-5" data-level="5">
+                    <div class="level-number">5</div>
+                    <div class="level-title">Peraturan Presiden (Perpres)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Peraturan yang ditetapkan oleh Presiden.</p>
+                        <p><strong>Contoh:</strong> Perpres No. 87 Tahun 2017 tentang Penguatan Pendidikan Karakter.</p>
+                        <p><strong>Relevansi:</strong> Memengaruhi kebijakan pendidikan karakter di sekolah.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-6" data-level="6">
+                    <div class="level-number">6</div>
+                    <div class="level-title">Peraturan Daerah Provinsi (Perda Provinsi)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Peraturan yang ditetapkan oleh DPRD Provinsi dengan persetujuan Gubernur.</p>
+                        <p><strong>Contoh:</strong> Perda tentang Kawasan Tanpa Rokok, Perda tentang Pendidikan.</p>
+                        <p><strong>Relevansi:</strong> Mengatur kehidupan di tingkat provinsi, termasuk aturan tentang larangan merokok bagi remaja.</p>
+                    </div>
+                </div>
+                
+                <div class="hierarchy-level level-7" data-level="7">
+                    <div class="level-number">7</div>
+                    <div class="level-title">Peraturan Daerah Kabupaten/Kota (Perda Kab/Kota)</div>
+                    <div class="level-details">
+                        <p><strong>Kedudukan:</strong> Peraturan yang ditetapkan oleh DPRD Kabupaten/Kota dengan persetujuan Bupati/Walikota.</p>
+                        <p><strong>Contoh:</strong> Perda tentang Ketertiban Umum, Perda tentang Penyelenggaraan Pendidikan.</p>
+                        <p><strong>Relevansi:</strong> Mengatur kehidupan sehari-hari di tingkat daerah terdekat dengan peserta didik.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="game-container">
+                <h3 class="game-title"><i class="fas fa-gamepad"></i> Game Interaktif: Susun Hierarki Hukum</h3>
+                <p>Uji pemahamanmu tentang hierarki peraturan perundang-undangan dengan menyusun tingkatannya dari yang tertinggi ke terendah!</p>
+                
+                <div id="sortable-list">
+                    <div class="quiz-option" data-level="1">Undang-Undang Dasar 1945</div>
+                    <div class="quiz-option" data-level="6">Peraturan Daerah Provinsi</div>
+                    <div class="quiz-option" data-level="3">Undang-Undang</div>
+                    <div class="quiz-option" data-level="5">Peraturan Presiden</div>
+                    <div class="quiz-option" data-level="2">Ketetapan MPR</div>
+                    <div class="quiz-option" data-level="4">Peraturan Pemerintah</div>
+                    <div class="quiz-option" data-level="7">Peraturan Daerah Kabupaten/Kota</div>
+                </div>
+                
+                <button class="btn btn-secondary" id="check-order">
+                    <i class="fas fa-check-circle"></i> Periksa Urutan
+                </button>
+                
+                <div id="game-feedback" class="quiz-feedback"></div>
+            </div>
+        </div>
+        
+        <!-- Tab Content: Aktivitas Pembelajaran -->
+        <div id="aktivitas" class="tab-content">
+            <h2><i class="fas fa-tasks"></i> Aktivitas Pembelajaran</h2>
+            
+            <div class="interactive-section">
+                <h3><i class="fas fa-calendar-alt"></i> Rencana Kegiatan Pembelajaran</h3>
+                
+                <div class="activity-box">
+                    <h4><span class="badge badge-mindful">Berkesadaran</span> Kegiatan Pendahuluan (15 menit)</h4>
+                    <ul>
+                        <li>Mindful Learning: Doa, presensi, dan refleksi tentang pentingnya aturan dalam kehidupan</li>
+                        <li>Joyful Learning: Game "Tebak Tingkatan Aturan" dengan analogi piramida</li>
+                        <li>Meaningful Learning: Mengaitkan hierarki aturan dengan tata urutan peraturan perundang-undangan</li>
+                    </ul>
+                </div>
+                
+                <div class="activity-box">
+                    <h4><span class="badge badge-meaningful">Bermakna</span> Kegiatan Inti (60 menit)</h4>
+                    <div class="grid-2">
+                        <div>
+                            <h5><i class="fas fa-lightbulb"></i> Memahami (20 menit)</h5>
+                            <p>Mempelajari materi hierarki hukum dan mengisi lembar kerja dengan contoh peraturan di setiap tingkatan.</p>
+                        </div>
+                        <div>
+                            <h5><i class="fas fa-cogs"></i> Menerapkan (25 menit)</h5>
+                            <p>Analisis kasus pelanggaran lalu lintas dalam kelompok kecil dan kaitkan dengan hierarki peraturan.</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h5><i class="fas fa-meditate"></i> Merefleksi (15 menit)</h5>
+                        <p>Refleksi tentang tantangan memahami hierarki hukum dan manfaatnya dalam kehidupan sehari-hari.</p>
+                    </div>
+                </div>
+                
+                <div class="activity-box">
+                    <h4><span class="badge badge-joyful">Menggembirakan</span> Kegiatan Penutup (15 menit)</h4>
+                    <ul>
+                        <li>Umpan balik konstruktif dari guru</li>
+                        <li>Penyimpulan bersama tentang pentingnya tata urutan peraturan</li>
+                        <li>Penugasan pencarian berita tentang pelanggaran hukum di kalangan remaja</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="journal-container">
+                <h3><i class="fas fa-journal-whills"></i> Jurnal Refleksi Pribadi</h3>
+                <p>Setelah mempelajari materi hierarki peraturan perundang-undangan, tuliskan refleksimu:</p>
+                
+                <div class="grid-2">
+                    <div>
+                        <h4>1. Apa yang paling menantang dari memahami hierarki peraturan perundang-undangan?</h4>
+                        <textarea id="reflection1" placeholder="Tuliskan jawabanmu di sini..."></textarea>
+                    </div>
+                    <div>
+                        <h4>2. Bagaimana pemahaman ini akan membantumu dalam menghadapi aturan di masyarakat?</h4>
+                        <textarea id="reflection2" placeholder="Tuliskan jawabanmu di sini..."></textarea>
+                    </div>
+                </div>
+                
+                <button class="btn btn-accent" id="save-reflection">
+                    <i class="fas fa-save"></i> Simpan Refleksi
+                </button>
+                <div id="reflection-saved" style="display:none; color: var(--success); margin-top: 10px;">
+                    <i class="fas fa-check-circle"></i> Refleksi berhasil disimpan!
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-users"></i>
+                    <h3>Aktivitas Kelompok: Analisis Kasus</h3>
+                </div>
+                <p><strong>Kasus:</strong> Seorang pelajar SMA mengendarai sepeda motor tanpa helm, melanggar lampu merah, dan tidak memiliki SIM. Ketika ditilang, ia membantah dengan alasan "hanya sebentar" dan "tidak ada polisi yang melihat".</p>
+                
+                <p><strong>Instruksi:</strong> Dalam kelompok, analisislah kasus ini dengan:</p>
+                <ol>
+                    <li>Mengidentifikasi peraturan apa saja yang dilanggar</li>
+                    <li>Menentukan hierarki peraturan yang dilanggar (tingkat UU, Perda, dll.)</li>
+                    <li>Menjelaskan sanksi yang mungkin diterima</li>
+                    <li>Merancampan kampanye kesadaran hukum untuk remaja</li>
+                </ol>
+                
+                <button class="btn" id="show-solution">
+                    <i class="fas fa-lightbulb"></i> Lihat Analisis Contoh
+                </button>
+                
+                <div id="case-solution" style="display:none; margin-top: 20px; padding: 15px; background: #f0f7ff; border-radius: 8px;">
+                    <h4>Analisis Kasus Contoh:</h4>
+                    <p><strong>Peraturan yang dilanggar:</strong></p>
+                    <ul>
+                        <li><strong>UU No. 22 Tahun 2009 tentang Lalu Lintas dan Angkutan Jalan:</strong> Pasal tentang kewajiban memakai helm, memiliki SIM, dan mematuhi lampu lalu lintas.</li>
+                        <li><strong>Perda Provinsi/Kabupaten:</strong> Peraturan tentang ketertiban umum dan keselamatan berlalu lintas.</li>
+                    </ul>
+                    <p><strong>Sanksi:</strong> Denda, pembinaan, hingga penyitaan kendaraan sesuai dengan Pasal 281 UU LLAJ.</p>
+                    <p><strong>Kampanye kesadaran:</strong> "Smart Rider" - kampanye di media sosial tentang pentingnya keselamatan berkendara bagi remaja.</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Tab Content: Asesmen -->
+        <div id="asesmen" class="tab-content">
+            <h2><i class="fas fa-clipboard-check"></i> Asesmen Pembelajaran</h2>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-stethoscope"></i>
+                        <h3>Asesmen Diagnostik</h3>
+                    </div>
+                    <ul>
+                        <li><strong>Self-Assessment:</strong> Jurnal refleksi setelah setiap pertemuan</li>
+                        <li><strong>Peer Assessment:</strong> Penilaian antar kelompok berdasarkan rubrik</li>
+                        <li><strong>Komitmen Pribadi:</strong> Penulisan komitmen untuk taat hukum</li>
+                    </ul>
+                </div>
+                
+                <div class="card">
+                    <div class="card-title">
+                        <i class="fas fa-chart-line"></i>
+                        <h3>Asesmen Formatif</h3>
+                    </div>
+                    <ul>
+                        <li>Kuis singkat / tanya jawab lisan</li>
+                        <li>Lembar kerja analisis kasus</li>
+                        <li>Umpan balik guru selama diskusi</li>
+                        <li>Observasi partisipasi dan kolaborasi</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="card-title">
+                    <i class="fas fa-chart-bar"></i>
+                    <h3>Asesmen Sumatif</h3>
+                </div>
+                <div class="grid-2">
+                    <div>
+                        <h4><i class="fas fa-edit"></i> Tes Tertulis</h4>
+                        <p>Soal esai untuk menganalisis kasus pelanggaran hukum, menjelaskan tata urutan peraturan, dan merumuskan upaya penumbuhan kesadaran hukum.</p>
+                    </div>
+                    <div>
+                        <h4><i class="fas fa-project-diagram"></i> Penilaian Kinerja/Proyek</h4>
+                        <p>Penilaian diskusi kelompok dan kemampuan merancang kampanye kesadaran hukum.</p>
+                    </div>
+                </div>
+                <div>
+                    <h4><i class="fas fa-folder-open"></i> Portofolio</h4>
+                    <p>Kumpulan tugas individu dan kelompok untuk menunjukkan perkembangan belajar peserta didik sepanjang bab.</p>
+                </div>
+            </div>
+            
+            <div class="quiz-container">
+                <h3><i class="fas fa-question-circle"></i> Kuis Singkat: Hierarki Hukum</h3>
+                
+                <div id="quiz-question">
+                    <p class="quiz-question">Manakah yang merupakan urutan hierarki peraturan perundang-undangan di Indonesia dari yang tertinggi ke terendah?</p>
+                    
+                    <div class="quiz-options">
+                        <div class="quiz-option" data-correct="false">A. Perpres - UU - UUD 1945 - Perda - PP</div>
+                        <div class="quiz-option" data-correct="false">B. UU - UUD 1945 - Perpres - PP - Perda</div>
+                        <div class="quiz-option" data-correct="true">C. UUD 1945 - Tap MPR - UU/Perppu - PP - Perpres - Perda</div>
+                        <div class="quiz-option" data-correct="false">D. UUD 1945 - Perda - UU - PP - Perpres</div>
+                    </
+    
+    <script>
+        console.log('Media Pembelajaran Interaktif');
+    </script>
+</body>
+</html>
